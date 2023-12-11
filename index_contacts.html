@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style_contacts.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index_project.html">Проекты</a>
+            <a href="index_about_us.html">О нас</a>
+            <a href="index.html">IDS.AM</a>
+            <a href="index_services.html">Услуги</a>
+            <a href="index_contacts.html">Контакты</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <figure class="A">
+                <img src="media/work.jpg" style="width: 700px; height: 468px;">
+            </figure>
+
+            <div>
+                <h1>Адрес</h1>
+                <div class="contact">
+                    <p>Москва, улица Большая Ордынка, д.29, стр.1, оф.5</p>
+                </div>
+            </div>
+            <div>
+                <h2>Контакты</h2>
+                <div class="contact">
+                    <p>тел.: +7 (915) 142-54-67</p>
+                    <p>al-arab23@yandex.ru</p>
+                </div>
+            </div>
+            <div>
+                <h3>График работы</h3>
+                <div class="contact">
+                    <p>Пн-Пт с 10-00 до 20-00</p>
+                    <p>Сб с 10-00 до 17-00</p>
+                    <p>Вс - Выходной</p>
+                </div>
+            </div>
+            <div>
+                <h4>Сотрудничество</h4>
+                <div class="contact">
+                    <p>alarab23@yandex.ru</p>
+                </div>
+            </div>
+        </div>
+        <div class="estimation">
+            <div class="like">
+                <p>Уважаемые и любимые наши заказчики!</p>
+                <p>Просим Вас оценить качество предоставленных услуг. Если Вам всё понравилось в отношении
+                    сотрудничества жмите на "Like". Если сотрудничество с нами не понравилось, то жмите на "Dislike".
+                </p>
+                <p>И мы неприменно вяжемся с Вами, чтобы узнать подробнне, что Вам не понравилось и постараться
+                    исправить все минусы на плюсы.</p>
+            </div>
+            <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script defer src="https://cdn.jsdelivr.net/npm/vue"></script>
+            <script defer src="main.js"></script>
+
+            <button v-on:click="like">Like<img class="img" src='media/like.png'></button>
+            <button v-on:click="dislike"><img class="img" src='media/dislike.png'> Dislike </button>
+        </div>
+
+        <div id="app">
+            <my-component></my-component>
+        </div>
+
+        <template>
+            <div>
+                <p>Количество лайков: {{ likesCount }}</p>
+                <p>Количество дизлайков: {{ dislikesCount }}</p>
+            </div>
+        </template>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p><u> Контакты для связи: </u></p>
+            <p> Тел. +7 (915) 142-54-67 </p>
+            <p> <a href="https://wa.me/89151425467">WhatsApp</a> <a href="https://t.me/Angel_2303_Angel">Telegram</a>
+            </p>
+            <p> e-mail: <a href="mailto:al-arab23@yandex.ru">al-arab23@yandex.ru</a> </p>
+        </div>
+    </footer>
+</body>
+
+</html>
